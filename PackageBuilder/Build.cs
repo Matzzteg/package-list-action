@@ -84,8 +84,8 @@ namespace VRC.PackageManagement.Automation
         {
             var result = new ListingSource()
             {
-                name = $"{manifest.displayName} Listing",
-                id = $"{manifest.name}.listing",
+                name = $"{manifest.displayName}",
+                id = $"{manifest.name}.repo",
                 author = new VRC.PackageManagement.Automation.Multi.Author()
                 {
                     name = manifest.author.name ?? "",
@@ -93,7 +93,7 @@ namespace VRC.PackageManagement.Automation
                     email = manifest.author.email ?? ""
                 },
                 url = CurrentListingUrl,
-                description = $"Listing for {manifest.displayName}",
+                description = $"Repository of {manifest.displayName}",
                 bannerUrl = "banner.png",
                 githubRepos = new List<string>()
                 {
